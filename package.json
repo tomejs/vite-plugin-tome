@@ -2,9 +2,32 @@
   "name": "@tomejs/vite-plugin-tome",
   "version": "0.0.1",
   "description": "Tome plugin for vite.",
-  "main": "index.js",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "esm",
+      "cjs"
+    ],
+    "dts": true,
+    "clean": true,
+    "minify": true,
+    "sourcemap": true
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup"
   },
   "repository": {
     "type": "git",
@@ -16,5 +39,12 @@
   "bugs": {
     "url": "https://github.com/tomejs/vite-plugin-tome/issues"
   },
-  "homepage": "https://github.com/tomejs/vite-plugin-tome#readme"
+  "homepage": "https://github.com/tomejs/vite-plugin-tome#readme",
+  "devDependencies": {
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "tomejs": "^0.0.5"
+  }
 }
