@@ -1,10 +1,11 @@
 {
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "outDir": "dist",
-    "target": "ES2020",
-    "module": "ES2020",
+    "target": "ES2017",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
     "moduleResolution": "NodeNext",
     "strict": true,
     "declaration": true,
