@@ -1,6 +1,6 @@
 {
   "name": "@tomejs/vite-plugin-tome",
-  "version": "0.1.43",
+  "version": "0.1.44",
   "description": "Tome plugin for vite.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -46,6 +46,6 @@
     "vite": "^4.0.4"
   },
   "dependencies": {
-    "tomejs": "^0.1.43"
+    "tomejs": "^0.1.44"
   }
 }
