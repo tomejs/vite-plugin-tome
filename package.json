@@ -1,6 +1,6 @@
 {
   "name": "@tomejs/vite-plugin-tome",
-  "version": "0.1.45",
+  "version": "0.1.46",
   "description": "Tome plugin for vite.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -27,7 +27,8 @@
     "sourcemap": true
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
