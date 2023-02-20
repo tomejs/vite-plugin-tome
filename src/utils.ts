@@ -12,6 +12,11 @@ function getURLAndNameForPage(page: string, dest = 'url') {
     let name = '';
     let file = parts.pop()?.replace('.tome', '');
     parts.forEach((part) => {
+      if(dest === 'url') {
+        part = part.replace('[', ':').replace(']', '');
+      } else {
+        part = part.replace('[', '$').replace(']', '');
+      }
       url += `/${part === 'index' ? '/' : part}`;
       name += `${part}_`;
     });
