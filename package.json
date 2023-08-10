@@ -1,6 +1,6 @@
 {
   "name": "@tomejs/vite-plugin-tome",
-  "version": "0.1.67",
+  "version": "0.1.68",
   "description": "Tome plugin for vite.",
   "type": "module",
   "main": "./dist/index.cjs",
